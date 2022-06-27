@@ -680,16 +680,18 @@
             </a>
         </div>
     </footer>
-    <div class="popub__background">
+    <div class="popup__background">
         <div class="popup__container">
             <button class="popup__close"></button>
             <h3 class="popup__title">
                 ваш фидбек
             </h3>
-            <form class="popup__question">
+            <form class="popup__form">
                 <label for="" class="popup__question-discription">
-                    Как часто вы заходите на сайт?
-                    <select name="" id="" class="popup__question-field">
+                    <span class="popup__question-text">
+                        Как часто вы заходите на сайт?
+                    </span>
+                    <select class="popup__question-field field" name="" id="">
                         <option selected>
                             Почти каждый день
                         </option>
@@ -704,38 +706,35 @@
                         </option>
                     </select>
                 </label>
-            </form>
-            <form class="popup__subscription">
-                <label for="" class="popup__subscription-discription">
-                    Вы подписаны на e-mail рассылку?
-                </label>
-                <label class="popup__subscription-option">
-                    <input class="popup__subscription-field" type="radio" name="radio" checked>
-                    <span class="popup__radio-text">
-                        Да
-                    </span>
-                </label>
-                <label class="popup__subscription-option">
-                    <input class="popup__subscription-field" type="radio" name="radio">
-                    <span class="popup__radio-text">
-                        Нет
-                    </span>
-                </label>
-            </form>
-            <form class="popup__message">
+                <div for="" class="popup__subscription">
+                    <sapn class="popup__subscription-text">
+                        Вы подписаны на e-mail рассылку?
+                    </sapn>
+                    <div class="popup__subscription-choise">
+                        <label class="popup__subscription-option">
+                            <input class="popup__subscription-field" type="radio" name="radio" checked>
+                            <span class="popup__radio-text">
+                                Да
+                            </span>
+                        </label>
+                        <label class="popup__subscription-option">
+                            <input class="popup__subscription-field" type="radio" name="radio">
+                            <span class="popup__radio-text">
+                                Нет
+                            </span>
+                        </label>
+                    </div>
+                </div>
                 <label for="" class="popup__message-discription">
-                    Расскажите, какой контент вы хотели бы видеть на нашем сайте?
-                    <textarea class="popup__message-field" placeholder="Может, больше рецептов?">
-                    </textarea>
+                    <span class="popup__message-text">
+                        Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+                    </span>
+                    <textarea class="popup__message-field field" placeholder="Может, больше рецептов?" rows="5"></textarea>
+                </label>
+                <label class="popup__sending">
+                    <input class="popup__sending-button" type="submit">
                 </label>
             </form>
-            <button class="popup__sending">
-                отправить
-            </button>
-
-
-
-
         </div>
     </div>
 </body>

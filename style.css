@@ -59,7 +59,7 @@ a {
 .header-container {
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -653,7 +653,7 @@ a {
     display: block;
 }
 
-.popub__background {
+.popup__background {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -666,8 +666,8 @@ a {
     right: 0;
     bottom: 0;
     z-index: 1;
+    display: none;
 }
-
 
 .popup__container {
     margin: auto;
@@ -675,5 +675,168 @@ a {
     width: 390px;
     padding: 54px 23px; 
     background-color: #ffffff;
+    position: relative;
+    font-size: 13px;
 }
 
+.popup__close {
+    position: absolute;
+    display: block;
+    top: -26px;
+    left: 373px;
+    border: none;
+    background-color: transparent;
+    background-image: url(svg/form-x.svg);
+    height: 18px;
+    width: 18px;
+}
+
+.popup__title {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 29px;
+}
+
+.popup__title::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 14px;
+    width: 66px;
+    height: 3px;
+    background-color: #b59f5b;
+    opacity: 0.4;
+}
+
+.popup__question-field {
+    display: block;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background-color: #f4f7f6;
+    padding: 18px 15px 15px 19px;
+    margin-top: 9px;
+    margin-bottom: 34px;
+    background-image: url(svg/form-arrows.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center;
+    background-size: 9px 17px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.popup__subscription-text {
+    display: block;
+}
+
+.popup__subscription-option {
+    display: inline-block;
+    margin-top: 9px;
+    margin-bottom: 33px;
+}
+
+.popup__subscription-option:first-child {
+    margin-right: 16px;
+}
+
+.popup__subscription-field {
+    display: none;
+}
+
+.popup__radio-text::before {
+    content: "";
+    background-image: url(svg/form-empty-circle.svg);
+    background-size: contain;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.popup__subscription-field:checked ~ .popup__radio-text::before {
+    background-image: url(svg/form-circle.svg);
+}
+
+.popup__message-text {
+    display: block;
+}
+
+.popup__message-field {
+    resize: none;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #f4f7f6;
+    padding: 21px;
+    margin-top: 12px;
+    margin-bottom: 26px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.popup__sending-button {
+    width: 100%;
+    border: none;
+    text-align: center;
+    background-color: #b59f5b;
+    padding: 19px 21px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 1s; /*Нужно проправить в других местах*/
+}
+
+.popup__sending-button:hover {
+    background-color: #323232;
+}
+
+@media (max-width: 1199px) { /*Я пока что только начал, всё что не сделал вижу*/
+
+    .header {
+        background-image: url(img/banner-bg-tablet.jpg);
+        background-position: center center;
+    }
+
+    .header-container {
+        padding: 0 35px;
+    }
+    
+    .header-nav {
+        display: none;
+    }
+
+    .trands__container {
+        flex-wrap: wrap;
+        row-gap: 4px;
+    }
+
+    .article__box {
+        flex-basis: 49%;
+    }
+
+    .main {
+        margin-right: 35px;
+    }
+
+    .main__section {
+        flex-direction: column;
+    }
+
+    .main__section-image {
+        margin-right: 0;
+    }
+
+    .products__container {
+        flex-wrap: wrap;
+        column-gap: 22px;
+    }
+
+    .products__box {
+        flex-basis: calc(50% - 11px);
+        flex-grow: 0;
+    }
+
+}
