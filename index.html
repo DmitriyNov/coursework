@@ -51,11 +51,13 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="header__burger hide-desktop">
+                <div class="header__burger-wraper" id="burger-open">
+                    <div class="header__burger hide-desktop">
+                    </div>
                 </div>
             </div>
             <div class="header-logo__mobile hide-desktop hide-tablet">
-                <a class="header-logo" href="#0">
+                <a class="header-logo__mobile-link" href="#0">
                     <img class="header-logo-image" src="svg/noemi-logo.svg" alt="Noemi-logo">
                 </a>
             </div>
@@ -685,9 +687,9 @@
             </a>
         </div>
     </footer>
-    <div class="popup__background">
+    <div class="popup__background" id="popup">
         <div class="popup__container">
-            <button class="popup__close"></button>
+            <button class="popup__close" id="popup-close"></button>
             <h3 class="popup__title">
                 ваш фидбек
             </h3>
@@ -742,5 +744,43 @@
             </form>
         </div>
     </div>
+    <div class="burger__nav" id="burger">
+        <button class="burger__close" id="burger-close"></button>
+        <nav class="burger-menu">
+            <ul class="burger-menu-list">
+                <li class="burger-menu-list-item">
+                    <a class="burger-menu-list-item-link" href="#0">
+                        главная        
+                    </a>
+                </li>
+                <li class="burger-menu-list-item">
+                    <a class="burger-menu-list-item-link" href="#0">
+                        посты
+                    </a>
+                </li>
+                <li class="burger-menu-list-item">
+                    <a class="burger-menu-list-item-link" href="#0">
+                        статьи
+                    </a>
+                </li>
+                <li class="burger-menu-list-item">
+                    <a class="burger-menu-list-item-link" href="#0">
+                        теги
+                    </a>
+                </li>
+                <li class="burger-menu-list-item">
+                    <a class="burger-menu-list-item-link" href="#0">
+                        темы
+                    </a>
+                </li>
+                <li class="burger-menu-list-item">
+                    <a class="burger-menu-list-item-link" href="#0">
+                        контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </body>
+<script src="main.js"></script>
 </html>
