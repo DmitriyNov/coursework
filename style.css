@@ -3,7 +3,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -16,14 +16,14 @@ ul {
 
 @font-face {
     font-family: "Open Sans";
-    src: url(../fonts/OpenSans-Regular.woff);
+    src: url(/fonts/OpenSans-Regular.woff), url(/fonts/OpenSans-Regular.woff2), url(/fonts/OpenSans-Regular.ttf);
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: url(../fonts/OpenSans-Bold.woff);
+    src: url(/fonts/OpenSans-Bold.woff), url(/fonts/OpenSans-Bold.woff2), url(/fonts/OpenSans-Bold.ttf);
     font-weight: 700;
     font-style: normal;
 }
